@@ -130,15 +130,14 @@ const monitorDLQ = () => {
 
       console.log(
         `Last failed task \n TaskID: ${lastTask.taskId} 
-         Payload: ${JSON.stringify(lastTask.payload)} 
-         Date: ${lastTask.createdAt}`
+        Payload: ${JSON.stringify(lastTask.payload)} 
+        Date: ${lastTask.createdAt}`
       );
     });
  
   } catch (err) {
     console.error('Monitoring DLQ failed:', err);
-  }
-  console.log("***");
+  } 
 };
  
 setInterval(() => { 
