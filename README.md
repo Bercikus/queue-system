@@ -22,6 +22,7 @@ node dist/server.js
 - 30% of tasks are randomly failed during processing
 - Failed tasks after max retries are written to a local dead-letter queue (array), and logged to `dlq.log`
 - Monitoring runs every 10 seconds, checking number of tasks in DLQ and displays the latest failed task
+- Architecture diagram in `diagram queue.jpg`
 
 ## Author
 Robert Szafarski (Bercikus)
