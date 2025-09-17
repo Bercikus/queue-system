@@ -1,0 +1,26 @@
+{
+  "taskId": "send_email_001",
+  "payload": {
+    "to": "john.lock@gmail.com",
+    "subject": "answer",
+    "body": "Hello, thank you for reply"
+  }
+}
+
+{
+    "taskId": "abc123",
+    "payload": {
+      "data": "Hello world"
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
