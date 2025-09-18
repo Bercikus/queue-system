@@ -24,5 +24,21 @@ node dist/server.js
 - Monitoring runs every 10 seconds, checking number of tasks in DLQ and displays the latest failed task
 - Architecture diagram in `diagram queue.jpg`
 
+## Testing Instructions 
+The server must be running on localhost:3000
+To submit task to API send `POST` request to `http://localhost:3000/tasks` with JSON body:
+```json
+{
+  "taskId": "email001",
+  "payload": {
+    "to": "john.lock@gmail.com",
+    "subject": "answer",
+    "body": "Hello, thank you for reply"
+  }
+}
+```
+
+Endpoint GET `http://localhost:3000/queues` returns the current state of Task Queue and DLQ as Json
+
 ## Author
 Robert Szafarski (Bercikus)

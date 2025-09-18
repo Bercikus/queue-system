@@ -44,14 +44,6 @@ taskEvents.on('taskRetried', ({ task, tries }) => {
   console.log(`Task ${task.taskId} failed retry number ${tries+1}`);
 });
 
-try {
-  const raw = fs.readFileSync('dlq.json', 'utf-8');
-  const tasks: Task[] = JSON.parse(raw);
-  DLQ.push(...tasks); 
-} catch (err) {
-  console.warn('DLQ file is invalid or doesnt exist :', err);
-}
-
 const logDLQTask = (task: Task) => {  
   const logEntry = {
     ...task,
